@@ -1,12 +1,13 @@
 "use client";
 import { postImage } from "@/utils/api/PostImage";
+import { ImageResponse } from "@/utils/types/ImageResponseType";
 import { useState } from "react";
 
 export const useImageUploadForm = () => {
   const [file, setFile] = useState<File | null>(null);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [imageData, setImageData] = useState<any | null>(null);
+  const [imageData, setImageData] = useState<ImageResponse | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,1 +1,1 @@
-export { default } from "@/components/lists/ImageGroupedList";
+export { default } from "@/components/ImageGroupBayHour/ImageGroupedList";

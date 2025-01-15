@@ -1,18 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
-import { getImagesProcessedByHour } from "@/utils/api/getByHour";
-import { CountByHour } from "@/utils/types/CountByHourType";
+import { useImageGroupedList } from "@/hooks/useImageGroupedList";
 
 const ImageGroupedList = () => {
-  const [groupedData, setGroupedData] = useState<CountByHour[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await getImagesProcessedByHour();
-      setGroupedData(response);
-    };
-    fetchData();
-  }, []);
+  const { groupedData } = useImageGroupedList();
 
   return (
     <div className="bg-white p-6 rounded-md shadow-md mt-8">
