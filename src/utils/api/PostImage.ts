@@ -10,7 +10,9 @@ export const postImage = async (formData: FormData): Promise<ImageResponse> => {
       },
     });
     return response.data;
+    console.log(response.data);
   } catch (error) {
+    console.log(error);
     console.error("Error al subir la imagen:", error);
     throw error;
   }

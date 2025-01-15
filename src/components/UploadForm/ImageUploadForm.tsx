@@ -4,8 +4,15 @@ import { useImageUploadForm } from "@/hooks/useImageUploadForm";
 import { Uploadedimage } from "@/components/UploadForm/uploadedimage";
 
 const ImageUploadForm = () => {
-  const { setFile, name, setName, message, imageData, handleSubmit } =
-    useImageUploadForm();
+  const {
+    setFile,
+    name,
+    setName,
+    message,
+    imageData,
+    handleSubmit,
+    isLoading,
+  } = useImageUploadForm();
 
   return (
     <form
@@ -44,6 +51,7 @@ const ImageUploadForm = () => {
         Upload Image
       </button>
       {message && <p className="text-red-500">{message}</p>}
+      {isLoading && <div>Cargando...</div>}
 
       {imageData && <Uploadedimage imageData={imageData} />}
     </form>
