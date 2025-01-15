@@ -1,4 +1,4 @@
-import ImageUploadForm from "@/components/forms/ImageUploadForm";
+import ImageUploadForm from "@/components/UploadForm/ImageUploadForm";
 import Link from "next/link";
 
 const Home = () => {

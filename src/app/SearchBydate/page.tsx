@@ -1,1 +1,1 @@
-export { default } from "@/components/lists/ImageList";
+export { default } from "@/components/imagesBydate/ImageList";
